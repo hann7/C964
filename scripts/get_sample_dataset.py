@@ -1,7 +1,9 @@
 import os.path
 import pandas as pd
 
-sample_per_category_size = 40
+# Script to get a subset of data to work with (original dataset includes 80k+ images)
+
+sample_per_category_size = 39
 
 try:
     file_path = '../data/trainLabels.csv'
@@ -16,10 +18,10 @@ try:
         raise ValueError(f"Not all severity levels have at least {sample_per_category_size} samples")
 
     def get_sample(group):
-        # take 40 random images from each severity level
+        # take specified number of random images from each severity level
         return group.sample(sample_per_category_size, random_state=42)
 
-    random_samples = df.groupby('level', group_keys=False).apply(get_sample)
+    random_samples = df.groupby('level', group_keys=False)[['image', 'level']].apply(get_sample)
 
     # save to new csv
     output_path = '../data/sample_200_labels.csv'
