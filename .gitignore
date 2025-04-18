@@ -1,1 +1,4 @@
 /dataset
+.idea
+/data/sample_dataset_processed
+/data/sample_dataset_raw

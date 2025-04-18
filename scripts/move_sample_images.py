@@ -5,7 +5,10 @@ import pandas as pd
 #  Script to move the gathered data subset to a new folder to work with
 
 images_path = '../dataset/train/train'
-output_path = '../data/sample_dataset'
+output_path = '../data/sample_dataset_raw'
+
+# create folder if it does not exist
+os.makedirs(output_path, exist_ok=True)
 
 image_labels = '../data/sample_200_labels.csv'
 df = pd.read_csv(image_labels)
