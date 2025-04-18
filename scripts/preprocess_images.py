@@ -1,6 +1,8 @@
 from PIL import Image
 import os
 
+# Script to resize images
+
 input_folder = '../data/sample_dataset_raw'
 output_folder = '../data/sample_dataset_processed'
 

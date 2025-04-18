@@ -1,6 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
+# Script to gather analytics and create visualizations for the dataset
+
 subset_file_path = '../data/sample_200_labels.csv'
 full_file_path = '../data/trainLabels.csv'
 
