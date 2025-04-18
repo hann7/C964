@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 # Script to gather analytics and create visualizations for the dataset
 
-subset_file_path = '../data/sample_200_labels.csv'
+subset_file_path = '../data/sample_labels.csv'
 full_file_path = '../data/trainLabels.csv'
 
 df_subset = pd.read_csv(subset_file_path)

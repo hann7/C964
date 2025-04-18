@@ -10,7 +10,7 @@ output_path = '../data/sample_dataset_raw'
 # create folder if it does not exist
 os.makedirs(output_path, exist_ok=True)
 
-image_labels = '../data/sample_200_labels.csv'
+image_labels = '../data/sample_labels.csv'
 df = pd.read_csv(image_labels)
 
 for row in df.itertuples():

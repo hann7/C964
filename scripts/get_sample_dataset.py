@@ -24,7 +24,7 @@ try:
     random_samples = df.groupby('level', group_keys=False)[['image', 'level']].apply(get_sample)
 
     # save to new csv
-    output_path = '../data/sample_200_labels.csv'
+    output_path = '../data/sample_labels.csv'
     random_samples.to_csv(output_path, index=False)
 
     print(f"Selected and saved {sample_per_category_size * 5} labels for data subset")
