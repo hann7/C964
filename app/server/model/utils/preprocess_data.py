@@ -1,12 +1,9 @@
 import pandas as pd
 import os
-import numpy as np
 from sklearn.model_selection import train_test_split
-from app.server.model.utils import preprocess_images
+from app.server.model.utils.preprocess_images import preprocess_images
 
-def process_and_split_data():
-    labels_file_path = '../../../data/sample_labels.csv'
-    images_path = '../../../data/sample_dataset_processed'
+def process_and_split_data(labels_file_path, images_path):
 
     labels_df = pd.read_csv(labels_file_path)
 
