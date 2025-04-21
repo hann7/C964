@@ -11,5 +11,5 @@ document.getElementById('upload-form').addEventListener('submit', async function
   });
 
   const data = await res.json();
-  document.getElementById('result').textContent = `Severity: ${data.severity}`;
+  document.getElementById('result').textContent = `Severity: ${data.severity ?? "Undetermined - please upload a valid image"}`;
 });
