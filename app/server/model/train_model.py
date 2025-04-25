@@ -56,5 +56,5 @@ history = model.fit(
 model.save('./saved_models/diabetic_retinopathy_model.h5')
 
 # print accuracy - needed for write up
-val_acc = history.history['val_accuracy'][-1]
-print(f"Final validation accuracy: {val_acc:.2%}")
+acc = history.history['accuracy'][-1]
+print(f"Final  accuracy: {acc:.2%}")
